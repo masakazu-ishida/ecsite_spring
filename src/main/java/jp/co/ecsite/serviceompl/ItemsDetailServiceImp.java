@@ -1,9 +1,10 @@
-package jp.co.ecsite.service;
+package jp.co.ecsite.serviceompl;
 
 import org.springframework.stereotype.Service;
 
 import jp.co.ecsite.dao.ItemsDAO;
 import jp.co.ecsite.dto.ItemsDTO;
+import jp.co.ecsite.service.ItemsDetailService;
 
 @Service
 public class ItemsDetailServiceImp implements ItemsDetailService {

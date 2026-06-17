@@ -1,9 +1,10 @@
-package jp.co.ecsite.service;
+package jp.co.ecsite.serviceompl;
 
 import org.springframework.stereotype.Service;
 
 import jp.co.ecsite.dao.CartDAO;
 import jp.co.ecsite.dto.CartDTO;
+import jp.co.ecsite.service.CartConfirmService;
 
 @Service
 public class CartConfirmServiceImpl implements CartConfirmService {

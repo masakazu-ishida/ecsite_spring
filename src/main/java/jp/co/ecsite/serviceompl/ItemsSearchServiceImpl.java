@@ -1,4 +1,4 @@
-package jp.co.ecsite.service;
+package jp.co.ecsite.serviceompl;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import jp.co.ecsite.dao.ItemsDAO;
 import jp.co.ecsite.dto.ItemsDTO;
 import jp.co.ecsite.form.SearchForm;
+import jp.co.ecsite.service.ItemsSearchService;
 
 @Service
 public class ItemsSearchServiceImpl implements ItemsSearchService {

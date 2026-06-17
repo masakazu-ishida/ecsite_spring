@@ -1,10 +1,11 @@
-package jp.co.ecsite.service;
+package jp.co.ecsite.serviceompl;
 
 import org.springframework.stereotype.Service;
 
 import jp.co.ecsite.dao.UsersDAO;
 import jp.co.ecsite.dto.UsersDTO;
 import jp.co.ecsite.form.LoginForm;
+import jp.co.ecsite.service.AuthenticateService;
 
 @Service
 public class AuthenticateServiceImpl implements AuthenticateService {
