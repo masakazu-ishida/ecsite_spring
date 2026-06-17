@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="jp.co.ecsite.dao.PurchasesDetailDAO">
+
+	<insert id="insert"  useGeneratedKeys="true" keyProperty="purchaseDetailId" parameterType="jp.co.ecsite.dto.PurchasesDetailsDTO">
+		INSERT INTO public.purchase_details(
+			purchase_id, item_id, amount)
+		VALUES (#{purchaseId}, #{itemId}, #{amount})
+	</insert>
+</mapper>

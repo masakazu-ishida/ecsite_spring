@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+		<title>商品の購入完了</title>
+		<link rel='stylesheet' type='text/css' href='style.css' />
+	</head>
+	<body>
+		<h3>以下の商品の購入を完了しました。</h3>
+		<br />
+	
+		<table>
+			<tr>
+				<th>商品名</th>
+				<th>商品の色</th>
+				<th>メーカー名</th>
+				<th>単価</th>
+				<th>数量</th>
+				<th></th>
+			</tr>
+			<tr th:each="purchaseDatails : ${purchases.purchaseDatails}" th:object="${purchaseDatails}">
+				<td th:text="*{item.itemName}">麦わら帽子</td>
+				<td th:text="*{item.color}">黄色</td>
+				<td th:text="*{item.manufacturer}">日本帽子製造</td>
+				<td th:text="*{item.price}">4980円</td>
+				<td th:text="*{amount}">2 個</td>
+				
+			</tr>
+			
+		</table>
+		合計 ${summary} 円<br />
+		清算方法 代金引換<br /><br />
+		配送先 ご自宅<br /><br />
+		<a th:href=@{/common/main}>商品検索</a>へ<br />
+	</body>
+</html>

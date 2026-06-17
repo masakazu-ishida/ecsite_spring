@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>商品詳細</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<h3>商品の詳細表示</h3>
+		<br />
+		<form th:action="@{/cart/add}" th:object="${cartForm}" method="POST">
+		<table>
+			<tr>
+				<th>商品名</th>
+				<td th:text="*{itemName}">万養牛</td>
+			</tr>
+			<tr>
+				<th>色</th>h
+				<td th:text="*{color}">赤</td>
+			</tr>
+			<tr>
+				<th>メーカー名</th>
+				<td th:text="*{manufacturer}">酒井産業</td>
+			</tr>
+			<tr>
+				<th>価格</th>
+				<td th:text="*{price}">1200円</td>
+			</tr>
+			<tr>
+				<th>在庫数</th>
+				<td th:text="*{stock}">100個</td>
+			</tr>
+		</table>
+		
+			数量
+			<select th:field="*{amount}">
+				<option selected value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select><br />
+			<input type="hidden" th:field="*{itemId}" />
+			<input type='submit' value='ショッピングカートに入れる' /><br />
+			※ログインしていない状態では、ボタンのクリック後、<a href='lgogin.html'>ログイン画面</a>に転送される。<br />
+		</form>
+		<a href='main.html'>商品検索</a>へ<br />
+	</body>
+</html>

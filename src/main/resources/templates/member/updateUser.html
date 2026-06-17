@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+		<title>会員情報</title>
+		<link rel='stylesheet' type='text/css' href='style.css' />
+	</head>
+	<body>
+		<h3>会員情報</h3>
+		<br />
+		<form th:action="@{/user/updateUserConfirm}" method='POST' th:object="${user}">
+			<table>
+				<tr>
+					<th>会員ID</th>
+					<td th:field="*{userId}">someone@example.com</td>
+				</tr>
+				<tr>
+					<th>お名前</th>
+					<td><input type='text' th:field="*{userName}" class='text' /></td>
+				</tr>
+				<tr>
+					<th>パスワード</th>
+					<td><input type='password' th:field="*{password}" class='password' /></td>
+				</tr>
+				<tr>
+					<th>パスワード(確認)</th>
+					<td><input type='password' th:field="*{password}" class='password' /></td>
+				</tr>
+				<tr>
+					<th>ご住所</th>
+					<td><input type='text' th:field="*{address}" class='text' /></td>
+				</tr>
+				<tr>
+					<td colspan='2'><input type='submit' value='変更' /></td>
+				</tr>
+			</table>
+		</form>
+		<a th:href="@{/withdrawConfirm}">退会する</a><br /><br />
+		<a th:href="@{/purchase/history}">購入履歴</a>へ<br />
+		<a th:href="@{/common/main}">商品検索</a>へ<br />
+	</body>
+</html>

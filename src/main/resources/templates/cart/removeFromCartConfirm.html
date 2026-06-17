@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+		<title>ショッピングカート内の商品を削除</title>
+		<link rel='stylesheet' type='text/css' href='style.css' />
+	</head>
+	<body>
+		<h3>以下の商品をショッピングカートから削除してよろしいですか？</h3>
+		<br />
+		
+		<form th:action="@{/cart/delete}" method='POST' th:object="${cart}">
+		<table>
+			<tr>
+				<td th:text="*{item.itemName}">麦わら帽子</td>
+				<td th:text="*{item.color}">黄色</td>
+				<td th:text="*{item.manufacturer}">日本帽子製造</td>
+				<td th:text="*{item.price}">4980円</td>
+				<td th:text="*{amount}">2 個</td>
+			</tr>
+		</table>
+		
+		
+			<input type='hidden' th:field="*{itemId}" />
+			<input type='submit' value='削除する' /><br />
+		</form>
+		<a th:href="@{/common/main}">商品検索</a>へ<br />
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+		<title>商品検索</title>
+		<link rel='stylesheet' type='text/css' href='style.css' />
+	</head>
+	<body>
+		<h3>商品の検索を行います。</h3>
+		<br />
+		<form th:action="@{/items/search}" method="GET" th:object="${searchForm}">
+			キーワード<br />
+			<input type="text" th:field="*{keyword}" /><br />
+			カテゴリ<br />
+			<select th:field="*{category}">
+				<option selected value="1">すべて</option>
+				<option value="2">帽子</option>
+				<option value="3">鞄</option>
+			</select><br />
+			<input type="submit" value="検索" /><br />
+		</form>
+		<a th:href="@{/cart/list}">ショッピングカートを見る</a><br /><br />
+		※ログインしていない場合には以下を表示<br />
+		<a th:href="@{/common/login}">ログイン</a><br /><br />
+		※ログイン済の場合には以下を表示<br />
+		<a th:href="@{/member/update}">会員情報の変更</a><br />
+	</body>
+</html>

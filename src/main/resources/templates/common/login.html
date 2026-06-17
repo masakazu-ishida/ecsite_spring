@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>login</title>
+	</head>
+	<body>
+		<p th:text="${errorMessage}"></p>
+		<form th:action="@{/common/login}" th:object="${loginForm}" method="post">
+			<label>ログインID</label><input type="text" th:field="*{userId}"><br>
+			<label>パスワード</label><input type="password" name="password"><br>
+		
+			<input type="submit" value="ログイン">
+			
+			
+
+			<input type="hidden" th:field="*{sourceUrl}" >
+			<input type="hidden" th:field="*{itemId}">
+			<input type="hidden" th:field="*{amount}">
+			
+		</form>
+		
+		
+		
+	</body>
+</html>
