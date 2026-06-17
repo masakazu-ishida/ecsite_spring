@@ -19,7 +19,7 @@ import jp.co.ecsite.service.CartAddService;
 import jp.co.ecsite.service.CartConfirmService;
 import jp.co.ecsite.service.CartDeleteService;
 import jp.co.ecsite.service.CartListService;
-import jp.co.ecsite.service.LoginSession;
+import jp.co.ecsite.serviceimpl.LoginSessionImpl;
 
 @Controller
 @RequestMapping("/cart")
@@ -30,10 +30,10 @@ public class CartController {
 	private final CartConfirmService cartConfirmService;
 	private final CartDeleteService cartDeleteService;
 
-	private LoginSession loginSession;
+	private LoginSessionImpl loginSession;
 
 	public CartController(CartAddService cartAddService, CartListService cartListService,
-			CartConfirmService cartConfirmService, CartDeleteService cartDeleteService, LoginSession loginSession) {
+			CartConfirmService cartConfirmService, CartDeleteService cartDeleteService, LoginSessionImpl loginSession) {
 		this.cartAddService = cartAddService;
 		this.cartListService = cartListService;
 		this.loginSession = loginSession;

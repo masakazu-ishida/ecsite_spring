@@ -11,15 +11,15 @@ import jp.co.ecsite.dto.UsersDTO;
 import jp.co.ecsite.form.CartForm;
 import jp.co.ecsite.form.LoginForm;
 import jp.co.ecsite.service.AuthenticateService;
-import jp.co.ecsite.service.LoginSession;
+import jp.co.ecsite.serviceimpl.LoginSessionImpl;
 
 @Controller
 @RequestMapping("/common")
 public class AuthenticateController {
 	private AuthenticateService svc;
-	private LoginSession sesson;
+	private LoginSessionImpl sesson;
 
-	public AuthenticateController(AuthenticateService svc, LoginSession session) {
+	public AuthenticateController(AuthenticateService svc, LoginSessionImpl session) {
 		this.svc = svc;
 		this.sesson = session;
 	}

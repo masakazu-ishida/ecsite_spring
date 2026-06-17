@@ -5,15 +5,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import jp.co.ecsite.service.LoginSession;
+import jp.co.ecsite.serviceimpl.LoginSessionImpl;
 
 @Controller
 @RequestMapping("/member")
 public class MemberChangeController {
 
-	private final LoginSession session;
+	private final LoginSessionImpl session;
 
-	public MemberChangeController(LoginSession session) {
+	public MemberChangeController(LoginSessionImpl session) {
 		this.session = session;
 	}
 

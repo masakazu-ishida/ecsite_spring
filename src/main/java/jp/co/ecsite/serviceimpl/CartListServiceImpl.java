@@ -1,4 +1,4 @@
-package jp.co.ecsite.serviceompl;
+package jp.co.ecsite.serviceimpl;
 
 import java.util.List;
 

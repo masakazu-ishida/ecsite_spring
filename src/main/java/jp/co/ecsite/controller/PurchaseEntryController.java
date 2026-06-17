@@ -11,9 +11,9 @@ import jp.co.ecsite.dto.CartDTO;
 import jp.co.ecsite.dto.PurchasesDTO;
 import jp.co.ecsite.dto.PurchasesDetailsDTO;
 import jp.co.ecsite.dto.UsersDTO;
-import jp.co.ecsite.service.LoginSession;
 import jp.co.ecsite.service.PurchaseEntryCommit;
 import jp.co.ecsite.service.PurchaseEntryConfirm;
+import jp.co.ecsite.serviceimpl.LoginSessionImpl;
 import jp.co.ecsite.util.PurchasesException;
 
 @Controller
@@ -22,10 +22,10 @@ public class PurchaseEntryController {
 
 	private final PurchaseEntryConfirm purchaseEntryConfirm;
 	private final PurchaseEntryCommit purchaseEntryCommit;
-	private final LoginSession session;
+	private final LoginSessionImpl session;
 
 	public PurchaseEntryController(PurchaseEntryConfirm purchaseEntryConfirm, PurchaseEntryCommit purchaseEntryCommit,
-			LoginSession session) {
+			LoginSessionImpl session) {
 		this.purchaseEntryConfirm = purchaseEntryConfirm;
 		this.purchaseEntryCommit = purchaseEntryCommit;
 		this.session = session;

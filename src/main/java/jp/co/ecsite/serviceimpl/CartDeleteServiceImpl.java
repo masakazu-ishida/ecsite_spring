@@ -1,4 +1,4 @@
-package jp.co.ecsite.serviceompl;
+package jp.co.ecsite.serviceimpl;
 
 import org.springframework.stereotype.Service;
 
